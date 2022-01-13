@@ -39,8 +39,8 @@ void binary(int array[], int size, int n)
 			last = middle - 1;
 		middle = (first + last) / 2;
 	}
-		if ( first > last )
-			printf("Value not found in the list.\n", n);
+	if ( first > last )
+		printf("Value not found in the list.\n", n);
 }
  
 int main()
@@ -73,27 +73,27 @@ int main()
 		min = vet[i];
 		for (j = i + 1; j < n; j++)
 		{
-		if (vet[j] < min)
-		{
-		min = vet[j];
-		index = j;
-		}
+			if (vet[j] < min)
+			{
+				min = vet[j];
+				index = j;
+			}
 		}
 		int temp = vet[i];
 		vet[i] = min;
 		vet[index] = temp;
-		}
+	}
 		
-		final = clock();
+	final = clock();
 		
-		total_time = ((float)(final - i_0)) / CLOCKS_PER_SEC;
+	total_time = ((float)(final - i_0)) / CLOCKS_PER_SEC;
 		
-		//Output of QuickSort
-		for (i = 0; i < n; i++)
-		{ 
+	//Output of QuickSort
+	for (i = 0; i < n; i++)
+	{ 
 		printf("%d ", vet[i]);
 		printf("\n\nExecution time of QuickSort Algorithm = %f", total_time);
-	};
+	}
 	
 	int num, size;
 	size = n;
